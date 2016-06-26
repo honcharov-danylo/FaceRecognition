@@ -1,8 +1,5 @@
 package com.company;
 
-import com.github.sarxos.webcam.Webcam;
-import com.github.sarxos.webcam.WebcamPanel;
-import com.github.sarxos.webcam.WebcamResolution;
 import org.bytedeco.javacpp.opencv_core;
 import org.bytedeco.javacpp.opencv_objdetect;
 
@@ -22,12 +19,14 @@ public class Main {
     public static void main(String[] args) {
   //     OpenCVCamera openCVCamera=new OpenCVCamera();
         com.company.WebcamPanel panel=new com.company.WebcamPanel();
-        panel.run();
-        //JFrame window = new JFrame("Test webcam panel");
-        //window.add(panel);
-
-
-//        window.setResizable(true);
+        panel.start();
+   // try{ FlandmarkClass.main("src.png");} catch (Exception e){e.printStackTrace();}
+        // test.test();
+//        JFrame window = new JFrame("Test webcam panel");
+//        window.add(new InstrumPanel());
+//
+//
+//        window.setPreferredSize(new Dimension(300,300));
 //        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        window.pack();
 //        window.setVisible(true);

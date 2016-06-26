@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Garbage;
 
 import org.bytedeco.javacpp.opencv_core;
 import org.bytedeco.javacv.*;

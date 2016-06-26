@@ -19,7 +19,7 @@ import static org.bytedeco.javacpp.opencv_videoio.cvWriteFrame;
 /**
  * Created by leon on 25.06.16.
  */
-public class WebcamPanel{
+public class WebcamPanel extends Thread{
 FrameGrabber grabber;
 OpenCVFrameConverter.ToIplImage converter;
 opencv_core.IplImage img;
@@ -48,6 +48,7 @@ boolean condition=true;
 
         grabber=new OpenCVFrameGrabber("");
         face=new Rectangle(0,0,0,0);
+        //cv.pack();
         converter=new OpenCVFrameConverter.ToIplImage();
         try{
             grabber.start();
@@ -78,6 +79,7 @@ boolean condition=true;
                 temp=Utils.IplImageToBufferedImage(img);
                  if(face.width==0 || counter==10) {
                     face=FacePainter.findFace(img);
+                     try{FlandmarkClass.paintLandmarks(img);}catch (Exception e){}
                      //temp=FacePainter.paintFace(temp,face);
                      counter=0;}
                 temp=FacePainter.paintFace(temp,face);

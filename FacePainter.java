@@ -1,7 +1,5 @@
 package com.company;
 
-import com.github.sarxos.webcam.Webcam;
-import com.github.sarxos.webcam.WebcamPanel;
 import org.bytedeco.javacpp.opencv_core;
 import org.bytedeco.javacpp.opencv_objdetect;
 
@@ -29,4 +27,10 @@ public class FacePainter {
         graphics2D.dispose();
         return photo;
     }
+//    public static BufferedImage paintCorners(BufferedImage face)
+//    {
+//        opencv_core.CvPoint2D32f points=FeaturesDetection.getCorners(Utils.BufferedImageToIplImage(face));
+//        for(int i=0;i<points.)
+//
+//    }
 }
